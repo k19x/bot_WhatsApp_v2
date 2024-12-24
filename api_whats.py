@@ -4,6 +4,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from os import getlogin
 import time
 
 proxies = {"http": "http://127.0.0.1:8080", "https": "http://127.0.0.1:8080"}
@@ -47,7 +48,7 @@ def api(number):
 chrome_options = Options()
 chrome_options.add_argument("--start-maximized")
 chrome_options.add_argument(
-    "--user-data-dir=C:\\Users\\Caique\\AppData\\Local\\Google\\Chrome\\User Data"
+     f"--user-data-dir=C:\\Users\\{getlogin()}\\AppData\\Local\\Google\\Chrome\\User Data"
 )
 chrome_options.add_argument("--disable-gpu")
 
