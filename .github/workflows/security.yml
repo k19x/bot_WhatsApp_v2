@@ -13,4 +13,4 @@ jobs:
     uses: k19x/ci_cd/.github/workflows/security-scan.yml@main
     with:
       fail_on: high
-    secrets: inherit
+    secrets: {}
